@@ -12,6 +12,8 @@ export class MapScreen extends WrapScreen {
         super(props);
     }
 
+    static defaultProps = {}
+
     _render() {
         return (
             <View style={styles.container}>
@@ -29,6 +31,9 @@ export class MapScreen extends WrapScreen {
                 <View style={styles.configContainer}>
                     <Text>地图</Text>
                 </View>
+                <View style={styles.tagHere}>
+                    <Text style={styles.tagText}>{Assets.str.APP_NAME} {Assets.str.SPLASH_CON}</Text>
+                </View>
             </View>
         );
     }
@@ -38,12 +43,21 @@ const styles = Utils.PLStyle({
     container: {
         flex: 1,
     },
+    tagHere: {
+        position: 'absolute',
+        top: 50,
+        left: 20,
+        backgroundColor: 'rgba(00, 00, 00, 0)',
+    },
+    tagText: {
+        fontSize: 20,
+        color: '#666666'
+    },
     mapContainer: {
-        flex: 1.8,
+        flex: 1.6,
     },
     configContainer: {
         flex: 1,
-        backgroundColor: 'blue'
     },
     webView: {
         flex: 1

@@ -11,7 +11,7 @@ const Header = {
 };
 
 const H5 = {
-    map:require('./html/map/index.html')
+    map: require('./html/map/index.html')
 };
 
 export {
@@ -19,3 +19,5 @@ export {
     Header,
     H5
 }
+
+export * from './str'
