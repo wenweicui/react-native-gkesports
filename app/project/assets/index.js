@@ -8,10 +8,14 @@ const Home = {
 
 const Header = {
     filter: require('./images/icon_header_filter.png'),
-}
+};
 
+const H5 = {
+    map:require('./html/map/index.html')
+};
 
 export {
     Home,
-    Header
+    Header,
+    H5
 }
