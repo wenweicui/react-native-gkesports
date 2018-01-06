@@ -11,7 +11,7 @@ const scale = width / 375.0;
 const TabNav = TabNavigator(
     {
         Work: {
-            screen: Modules.WorkScreen,
+            screen: Modules.MapScreen,
             navigationOptions: {
                 tabBarLabel: '工作',
                 tabBarIcon: ({focused, tintColor}) => (

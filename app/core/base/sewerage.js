@@ -7,7 +7,7 @@ const SW = (options) => {
     const { $AppProjectName } = options;
     (async () => {
         await initGlobal();
-        // 进行异常处理(仅当release时有效)
+        // 进行异常处理
         ErrorHandler();
         AppRegistry.registerComponent($AppProjectName, () => entry);
     })();
