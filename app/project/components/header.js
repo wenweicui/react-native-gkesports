@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import * as Utils from "../../core/utils";
 import {Header} from "react-native-elements";
 import _ from 'lodash'
+
 export class KHeader extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +16,7 @@ export class KHeader extends Component {
             return (
                 <Header
                     backgroundColor={'white'}
-                    centerComponent={{text: header, style: {fontSize: 18, color: '#323232'}}}
+                    centerComponent={{text: header, style: {fontSize: 20, color: '#666'}}}
                 />
             )
         }
@@ -23,38 +24,9 @@ export class KHeader extends Component {
             return (
                 <Header
                     backgroundColor={'white'}
-                    leftComponent={!header.left ? {} :
-                        header.left.icon ?
-                            <TouchableOpacity
-                                onPress={() => !_.isNull(this.props.header.left.onClick) ? this.props.header.left.onClick() : this.props.navigation.pop()}>
-                                <Image
-                                    resizeMode={'contain'}
-                                    source={header.left.icon}
-                                    style={styles.headerImage}/>
-                            </TouchableOpacity>
-                            :
-                            <TouchableOpacity
-                                onPress={() => !_.isNull(this.props.header.left.onClick) ? this.props.header.left.onClick() : this.props.navigation.pop()}>
-                                <Text>{header.left.text}</Text>
-                            </TouchableOpacity>
-                    }
-                    centerComponent={{
-                        text: !_.isNull(header.title) ? this.props.currentRouteName : header.title,
-                        style: {fontSize: 18, color: '#323232'}
-                    }}
-                    rightComponent={!header.right ? {}
-                        : (header.right.icon ?
-                                <TouchableOpacity onPress={() => this.props.header.right.onClick()}>
-                                    <Image
-                                        resizeMode={'contain'}
-                                        source={header.right.icon}
-                                        style={styles.headerImage}/>
-                                </TouchableOpacity> :
-                                <TouchableOpacity onPress={() => this.props.header.right.onClick()}>
-                                    <Text>{header.right.text}</Text>
-                                </TouchableOpacity>
-                        )
-                    }
+                    leftComponent={{icon: 'chevron-left', type: 'feather', color: '#666', size: 25}}
+                    centerComponent={{text: this.props.currentRouteName, style: {fontSize: 20, color: '#666'}}}
+                    rightComponent={{}}
                 />
             )
         }

@@ -39,7 +39,8 @@ export class HomeScreen extends WrapScreen {
                                 {
                                     item.map((module, i) => {
                                         return (
-                                            <TouchableOpacity style={styles.configItem} key={i}>
+                                            <TouchableOpacity style={styles.configItem} key={i}
+                                                              onPress={() => this.props.navigation.navigate(module.router)}>
                                                 <Icon
                                                     size={40}
                                                     name={module.icon}
