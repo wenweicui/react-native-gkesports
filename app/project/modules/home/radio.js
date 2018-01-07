@@ -10,7 +10,11 @@ export class RadioScreen extends WrapScreen{
     constructor(props) {
         super(props);
     }
-
+    static defaultProps = {
+        header: {
+            title: "电台",
+        }
+    }
     _render() {
         return (
             <View>

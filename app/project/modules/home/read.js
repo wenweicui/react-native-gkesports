@@ -10,7 +10,11 @@ export class ReadScreen extends WrapScreen{
     constructor(props) {
         super(props);
     }
-
+    static defaultProps = {
+        header: {
+            title: "阅读",
+        }
+    }
     _render() {
         return (
             <View>

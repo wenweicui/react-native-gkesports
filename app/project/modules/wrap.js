@@ -24,18 +24,17 @@ export class WrapScreen extends Component {
 
     static defaultProps = {
         header: {
-            left: {
-                icon: Assert.Home.work_selected,
-                onClick: () => {
-                }
-            }
+            title: '',
         }
     };
 
     render() {
+        let t = this.getCurrentRouteName();
         return (
             <View style={styles.container}>
-                <KHeader header={this.props.header} currentRouteName={this.getCurrentRouteName()}/>
+                <KHeader header={this.props.header} title={t} onLeftPress={() => {
+                    this.props.navigation.goBack()
+                }}/>
                 {this._render()}
             </View>
         )

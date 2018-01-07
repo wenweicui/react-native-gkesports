@@ -5,16 +5,19 @@ import {
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 
-export class MeScreen extends WrapScreen{
+export class MeScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
     }
 
+    static defaultProps = {
+        header: '我的'
+    }
+
     _render() {
         return (
             <View>
-                <Text>Me</Text>
             </View>
         )
     }

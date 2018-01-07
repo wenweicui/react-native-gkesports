@@ -12,34 +12,12 @@ export class MessageScreen extends WrapScreen {
     }
 
     static defaultProps = {
-        header: {
-            title: '消息',
-            left: {
-                icon: Assert.Home.work_selected,
-                text: 'back',
-                onClick: () => {
-                    alert('消息aaa');
-                }
-            },
-            right: {
-                icon: Assert.Header.filter,
-                onClick: () => {
-                    alert('消息保存');
-                }
-            }
-        }
+        header: '消息'
     }
 
     _render() {
         return (
             <View>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
-                <Text>sssssss</Text>
             </View>
         )
     }

@@ -10,7 +10,11 @@ export class QuestionScreen extends WrapScreen{
     constructor(props) {
         super(props);
     }
-
+    static defaultProps = {
+        header: {
+            title: "问答",
+        }
+    }
     _render() {
         return (
             <View>
