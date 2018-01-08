@@ -1,14 +1,12 @@
 import React from 'react';
 import {
     View,
-    Text, TouchableOpacity, FlatList, Image, Dimensions
+    Text, TouchableOpacity, FlatList, Image
 } from 'react-native';
 import {WrapScreen} from "../wrap";
-import * as Utils from "../../../core/utils/style";
+import * as Utils from "../../../core/utils";
 import * as Assets from '../../assets'
 import {Avatar, Button, Divider} from "react-native-elements";
-
-const w = Dimensions.get('window').width;
 
 export class MeScreen extends WrapScreen {
 
@@ -110,8 +108,8 @@ const styles = Utils.PLStyle({
         padding: 1
     },
     image: {
-        width: w / 3 - 2,
-        height: w / 3 - 2,
+        width: Utils.sw / 3 - 2,
+        height: Utils.sw / 3 - 2,
         margin: 1
     }
 })

@@ -10,7 +10,8 @@ const Home = {
     me_selected: require('./images/icon_person_selected.png'),
 };
 const H5 = {
-    map: require('./html/map/index.html')
+    map: require('./html/map/index.html'),
+    resume: require('./html/resume/index.html')
 };
 const Me = {
     avatar: require('./images/avatar.jpeg'),
