@@ -15,18 +15,18 @@ const H5 = {
 const Me = {
     avatar: require('./images/avatar.jpeg'),
     Images: [
-        require('./images/Image 10.png'),
-        require('./images/Image 11.png'),
-        require('./images/Image 2.png'),
-        require('./images/Image 3.png'),
-        require('./images/Image 4.png'),
-        require('./images/Image 1.png'),
-        require('./images/Image 12.png'),
-        require('./images/Image 8.png'),
-        require('./images/Image 6.png'),
-        require('./images/Image 9.png'),
-        require('./images/Image 5.png'),
-        require('./images/Image 7.png'),
+        require('./images/img1.png'),
+        require('./images/img2.png'),
+        require('./images/img3.png'),
+        require('./images/img4.png'),
+        require('./images/img5.png'),
+        require('./images/img6.png'),
+        require('./images/img7.png'),
+        require('./images/img8.png'),
+        require('./images/img9.png'),
+        require('./images/img10.png'),
+        require('./images/img11.png'),
+        require('./images/img12.png'),
     ]
 };
 

@@ -1,24 +1,40 @@
 import React from 'react';
 import {
     View,
-    Text,
+    Text, TouchableOpacity, FlatList, Image, Dimensions
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 import * as Utils from "../../../core/utils/style";
 import * as Assets from '../../assets'
 import {Avatar, Button, Divider} from "react-native-elements";
 
+const w = Dimensions.get('window').width;
+
 export class MeScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
+        this.state = {
+            images: Assets.Me.Images
+        }
     }
 
     static defaultProps = {
         header: 'none'
     }
 
+    _keyExtractor = (item, index) => item.id;
+
+    _renderItem = ({item}) => (
+        <Image
+            source={item}
+            style={styles.image}
+        />
+
+    );
+
     _render() {
+        console.log(this.state.images)
         return (
             <View style={styles.container}>
                 <View style={styles.head}>
@@ -39,22 +55,25 @@ export class MeScreen extends WrapScreen {
                 </View>
                 <Divider style={{backgroundColor: '#eee', marginTop: 20}}/>
                 <View style={styles.follows}>
-                    <View style={styles.followItem}>
+                    <TouchableOpacity style={styles.followItem}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Resume</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>简历</Text>
-                    </View>
-                    <View style={styles.followItem}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.followItem}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Skill</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>技能</Text>
-                    </View>
-                    <View style={styles.followItem}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.followItem}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Blog</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>博客</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
-                <View style={styles.images}>
-
-                </View>
+                <FlatList
+                    numColumns={3}
+                    keyExtractor={this._keyExtractor}
+                    data={this.state.images}
+                    renderItem={this._renderItem}
+                />
             </View>
         )
     }
@@ -85,5 +104,14 @@ const styles = Utils.PLStyle({
         justifyContent: 'center',
         alignItems: 'center'
     },
-    images: {}
+    images: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: 1
+    },
+    image: {
+        width: w / 3 - 2,
+        height: w / 3 - 2,
+        margin: 1
+    }
 })
