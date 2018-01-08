@@ -3,9 +3,9 @@
  */
 import React, {Component} from 'react';
 import {View, Image} from 'react-native';
-import * as Utils from '../utils'
+import * as Utils from '../../core/utils/index'
 
-class TabBarItem extends Component {
+export class TabBarItem extends Component {
 
     render() {
         let selectedImage = this.props.selectedImage ? this.props.selectedImage : this.props.normalImage;
@@ -33,4 +33,4 @@ const styles = Utils.PLStyle({
     }
 });
 
-export default TabBarItem
+

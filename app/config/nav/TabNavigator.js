@@ -1,6 +1,6 @@
 import React from 'react';
 import {TabNavigator, TabBarBottom} from 'react-navigation';
-import TabBarItem from '../../core/widget/TabBarItem'
+import {TabBarItem} from '../../project/components'
 import * as Modules from '../../project/modules';
 import * as Asserts from '../../project/assets'
 

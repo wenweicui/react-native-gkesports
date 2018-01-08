@@ -13,7 +13,7 @@ const H5 = {
     map: require('./html/map/index.html')
 };
 const Me = {
-    avatar: require('./images/acatar.jpeg'),
+    avatar: require('./images/avatar.jpeg'),
     Images: [
         require('./images/Image 10.png'),
         require('./images/Image 11.png'),
@@ -32,7 +32,8 @@ const Me = {
 
 export {
     Home,
-    H5
+    H5,
+    Me
 }
 
 export * from './str'
