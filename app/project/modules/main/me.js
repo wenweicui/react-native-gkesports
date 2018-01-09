@@ -21,7 +21,7 @@ export class MeScreen extends WrapScreen {
         header: 'none'
     }
 
-    _keyExtractor = (item, index) => item.id;
+    _keyExtractor = (item, index) => index;
 
     _renderItem = ({item}) => (
         <Image
@@ -32,7 +32,6 @@ export class MeScreen extends WrapScreen {
     );
 
     _render() {
-        console.log(this.state.images)
         return (
             <View style={styles.container}>
                 <View style={styles.head}>
@@ -53,7 +52,9 @@ export class MeScreen extends WrapScreen {
                 </View>
                 <Divider style={{backgroundColor: '#eee', marginTop: 20}}/>
                 <View style={styles.follows}>
-                    <TouchableOpacity style={styles.followItem}>
+                    <TouchableOpacity style={styles.followItem} onPress={() => {
+                        this.props.navigation.navigate('Web', {url: Assets.H5.resume})
+                    }}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Resume</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>简历</Text>
                     </TouchableOpacity>
@@ -61,7 +62,9 @@ export class MeScreen extends WrapScreen {
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Skill</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>技能</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.followItem}>
+                    <TouchableOpacity style={styles.followItem} onPress={() => {
+                        this.props.navigation.navigate('Web', {url: {uri: 'http://mifind.online/splash'}})
+                    }}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Blog</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>博客</Text>
                     </TouchableOpacity>

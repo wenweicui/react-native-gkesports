@@ -1,8 +1,8 @@
-import SW from './sewerage'
+import ME from './knowme'
 import {config} from '../../config/setting'
 
 const launcher = (function (options) {
-    new SW(options);
+    new ME(options);
 })(config);
 
 export default launcher;

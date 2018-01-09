@@ -1,5 +1,6 @@
 import {StackNavigator} from 'react-navigation';
 import * as Modules from '../../project/modules';
+import {WebScreen} from '../../project/components/web'
 import TabNav from "./TabNavigator";
 
 /**
@@ -19,7 +20,13 @@ const Splash = {
 const Main = {
     Main: {screen: TabNav}
 };
-
+/**
+ * 其他页面
+ * @type {{Web: {screen: WebScreen}}}
+ */
+const Common = {
+    Web: {screen: WebScreen}
+}
 const Home = {
     Picture: {screen: Modules.PictureScreen},
     Read: {screen: Modules.ReadScreen},
@@ -33,7 +40,8 @@ const Navigator = StackNavigator(
     {
         // ...Splash,
         ...Main,
-        ...Home
+        ...Home,
+        ...Common
     }, {
         navigationOptions: {
             header: null,
