@@ -12,13 +12,10 @@ export class MeScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
+        this.header = 'none'
         this.state = {
             images: Assets.Me.Images
         }
-    }
-
-    static defaultProps = {
-        header: 'none'
     }
 
     _keyExtractor = (item, index) => index;
@@ -53,17 +50,25 @@ export class MeScreen extends WrapScreen {
                 <Divider style={{backgroundColor: '#eee', marginTop: 20}}/>
                 <View style={styles.follows}>
                     <TouchableOpacity style={styles.followItem} onPress={() => {
-                        this.props.navigation.navigate('Web', {url: Assets.H5.resume})
+                        this.props.navigation.navigate('Web', {url: Assets.H5.resume, title: 'MIFind & Resume'})
                     }}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Resume</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>简历</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.followItem}>
-                        <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Skill</Text>
-                        <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>技能</Text>
+                    <TouchableOpacity style={styles.followItem} onPress={() => {
+                        this.props.navigation.navigate('Web', {
+                            url: {uri: 'https://github.com/mifind'},
+                            title: 'MIFind & GayHub'
+                        })
+                    }}>
+                        <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>github</Text>
+                        <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>同性交友</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.followItem} onPress={() => {
-                        this.props.navigation.navigate('Web', {url: {uri: 'http://mifind.online/splash'}})
+                        this.props.navigation.navigate('Web', {
+                            url: {uri: 'http://mifind.online/splash'},
+                            title: 'MIFind & Blog'
+                        })
                     }}>
                         <Text style={{fontWeight: '300', fontSize: 20, color: '#ccc'}}>Blog</Text>
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>博客</Text>

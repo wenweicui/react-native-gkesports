@@ -9,10 +9,7 @@ export class PictureScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
-    }
-
-    static defaultProps = {
-        header: {
+        this.header = {
             title: "图文",
         }
     }

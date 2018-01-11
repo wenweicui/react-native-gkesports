@@ -5,16 +5,15 @@ import {
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 
-export class RadioScreen extends WrapScreen{
+export class RadioScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
-    }
-    static defaultProps = {
-        header: {
+        this.header = {
             title: "电台",
         }
     }
+
     _render() {
         return (
             <View>

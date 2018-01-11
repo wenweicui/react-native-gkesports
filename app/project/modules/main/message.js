@@ -9,10 +9,7 @@ import * as Assert from '../../assets'
 export class MessageScreen extends WrapScreen {
     constructor(props) {
         super(props);
-    }
-
-    static defaultProps = {
-        header: '消息'
+        this.header='消息'
     }
 
     _render() {

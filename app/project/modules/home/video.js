@@ -9,13 +9,11 @@ export class VideoScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
-    }
-
-    static defaultProps = {
-        header: {
+        this.header={
             title: "影视",
         }
     }
+
 
     _render() {
         return (

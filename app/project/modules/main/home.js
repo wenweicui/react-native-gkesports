@@ -13,9 +13,8 @@ import {homeModules} from '../../../config/nav/home.router'
 export class HomeScreen extends WrapScreen {
     constructor(props) {
         super(props);
+        this.header = 'none'
     }
-
-    static defaultProps = {}
 
     _render() {
         const modules = _.chunk(homeModules, 3); // 将HomeModule 每三个分成一个数组

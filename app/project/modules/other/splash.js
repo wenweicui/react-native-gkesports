@@ -16,6 +16,7 @@ export class SplashScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
+        this.header = 'none'
         this.state = {
             progress: 0
         }

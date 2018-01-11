@@ -8,9 +8,12 @@ import {WebView} from "react-native";
 
 export class WebScreen extends WrapScreen {
 
-    static defaultProps = {
-        header: 'none'
-    };
+    constructor(props) {
+        super(props);
+        this.header = {
+            title: this.props.navigation.state.params.title
+        }
+    }
 
     _render() {
         return (
