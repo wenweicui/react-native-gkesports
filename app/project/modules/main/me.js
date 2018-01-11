@@ -28,9 +28,9 @@ export class MeScreen extends WrapScreen {
 
     );
 
-    _render() {
+    _renderHead() {
         return (
-            <View style={styles.container}>
+            <View>
                 <View style={styles.head}>
                     <Avatar
                         width={120}
@@ -74,7 +74,15 @@ export class MeScreen extends WrapScreen {
                         <Text style={{fontWeight: '400', fontSize: 16, color: '#666', marginTop: 10}}>博客</Text>
                     </TouchableOpacity>
                 </View>
+            </View>
+        )
+    }
+
+    _render() {
+        return (
+            <View style={styles.container}>
                 <FlatList
+                    ListHeaderComponent={this._renderHead()}
                     numColumns={3}
                     keyExtractor={this._keyExtractor}
                     data={this.state.images}
