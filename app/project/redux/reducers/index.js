@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import Request from './request'
+import Common from './common'
 
 let MainReducer = combineReducers({
-    Request
+    Common,
 });
 
 module.exports = MainReducer;
