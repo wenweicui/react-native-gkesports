@@ -4,7 +4,7 @@ import {View} from "react-native";
 import _ from 'lodash'
 import React from "react";
 import {KHeader} from '../components'
-
+import store from '../redux/store/configStore'
 /**
  * BaseScreen
  */
@@ -18,6 +18,7 @@ export class WrapScreen extends Component {
     constructor(props) {
         super(props);
         this.utils = Utils;
+        this.store = store
         this.routeName = this.getCurrentRouteName();
         this.header = {
             title: '',

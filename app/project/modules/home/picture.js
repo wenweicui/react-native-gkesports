@@ -4,8 +4,11 @@ import {
     Text,
 } from 'react-native';
 import {WrapScreen} from "../wrap";
+import {connect} from "react-redux";
+import * as Actions from '../../redux/actions'
+import Urls from "../../../config/api/urls";
 
-export class PictureScreen extends WrapScreen {
+class PictureScreen extends WrapScreen {
 
     constructor(props) {
         super(props);
@@ -13,8 +16,11 @@ export class PictureScreen extends WrapScreen {
             title: "图文",
         }
     }
-
+    componentDidMount() {
+        this.store.dispatch(Actions.request(Urls.Picture.getIdList));
+    }
     _render() {
+        console.log(this.props.idList)
         return (
             <View>
                 <Text>Picture</Text>
@@ -22,3 +28,13 @@ export class PictureScreen extends WrapScreen {
         )
     }
 }
+
+//make this component available to the app
+function mapStateToProps(state) {
+    return {
+        idList: state.Picture.getIdList,
+        requestStatus: state.Common.requestStatus
+    }
+}
+
+export default connect(mapStateToProps)(PictureScreen);

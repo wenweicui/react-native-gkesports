@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 
-export class RadioScreen extends WrapScreen {
+export default class RadioScreen extends WrapScreen {
 
     constructor(props) {
         super(props);

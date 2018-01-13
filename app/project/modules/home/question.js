@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 
-export class QuestionScreen extends WrapScreen{
+export default class QuestionScreen extends WrapScreen{
 
     constructor(props) {
         super(props);
