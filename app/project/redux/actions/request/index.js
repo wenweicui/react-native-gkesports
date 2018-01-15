@@ -4,44 +4,19 @@ import api from "../../../../config/api/api";
 import {SUCCESS_CODE, TOKEN_ERROR_CODE, Status} from "../../../../config/api/api.config";
 import Toast from "teaset/components/Toast/Toast";
 
-const fetchData = (url, body, dispatch) => {
-    if (!body) {
-        body = {};
-    }
-    let userId;
-    if (!body.hasOwnProperty('userId')) {
-        if (_USERID_) {
-            userId = _USERID_;
-            Object.assign(body, {
-                userId: userId,
-            })
-        }
-    }
-    Object.assign(body, {
-        token: _USERTOKEN_ ? _USERTOKEN_ : ''
-    });
-    let formData = new FormData();
-    for (let prop in body) {
-        if (Array.isArray(body[prop])) {
-            for (let value of body[prop]) {
-                formData.append(prop, value);
-            }
-        } else {
-            formData.append(prop, body[prop]);
-        }
-    }
-    api(config.WebServerUrl).post(url, formData)
+const fetchData = (url, dispatch) => {
+    api(config.WebServerUrl).get(url)
         .then((response) => {
                 console.log(response)
                 const {status} = response;
                 if (response.ok) {
                     if (response.status && status === 200) {
-                        if (parseInt(response.data.code) === SUCCESS_CODE) {
+                        if (parseInt(response.data.res) === SUCCESS_CODE) {
                             dispatch({
                                 type: url,
-                                data: response.data.body
+                                data: response.data.data
                             })
-                        } else if (parseInt(response.data.code) === TOKEN_ERROR_CODE) {
+                        } else if (parseInt(response.data.res) === TOKEN_ERROR_CODE) {
                             // 这里处理token异常
                             console.log('token is over , please 重新登录')
                             dispatch({
@@ -69,6 +44,6 @@ const fetchData = (url, body, dispatch) => {
         );
 }
 
-export const request = (url, body) => (dispatch) => {
-    fetchData(url, body, dispatch);
+export const request = (url) => (dispatch) => {
+    fetchData(url,  dispatch);
 }

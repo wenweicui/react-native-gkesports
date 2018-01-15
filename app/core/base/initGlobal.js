@@ -19,7 +19,6 @@ const initGlobal = () => {
         global._IOS_ = (Platform.OS === 'ios');
         global._Android_ = (Platform.OS === 'android');
         global.storage = storage;
-        Object.assign(global, GLOB);
         resolve(global);
     });
 }
