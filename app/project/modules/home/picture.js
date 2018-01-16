@@ -7,6 +7,7 @@ import {WrapScreen} from "../wrap";
 import {connect} from "react-redux";
 import * as Actions from '../../redux/actions'
 import Urls from "../../../config/api/urls";
+import ActionType from "../../redux/actionType";
 
 class PictureScreen extends WrapScreen {
 
@@ -16,14 +17,16 @@ class PictureScreen extends WrapScreen {
             title: "图文",
         }
     }
+
     componentDidMount() {
-        this.store.dispatch(Actions.request(Urls.Picture.getIdList));
+        this.store.dispatch(Actions.request(Urls.Picture().getPictureList, ActionType.REQUEST_LIST));
     }
+
     _render() {
         console.log(this.props.idList)
         return (
             <View>
-                <Text>Picture</Text>
+
             </View>
         )
     }

@@ -4,7 +4,7 @@ import api from "../../../../config/api/api";
 import {SUCCESS_CODE, TOKEN_ERROR_CODE, Status} from "../../../../config/api/api.config";
 import Toast from "teaset/components/Toast/Toast";
 
-const fetchData = (url, dispatch) => {
+const fetchData = (url, type, dispatch) => {
     api(config.WebServerUrl).get(url)
         .then((response) => {
                 console.log(response)
@@ -13,7 +13,7 @@ const fetchData = (url, dispatch) => {
                     if (response.status && status === 200) {
                         if (parseInt(response.data.res) === SUCCESS_CODE) {
                             dispatch({
-                                type: url,
+                                type: type,
                                 data: response.data.data
                             })
                         } else if (parseInt(response.data.res) === TOKEN_ERROR_CODE) {
@@ -44,6 +44,6 @@ const fetchData = (url, dispatch) => {
         );
 }
 
-export const request = (url) => (dispatch) => {
-    fetchData(url,  dispatch);
+export const request = (url, type) => (dispatch) => {
+    fetchData(url, type, dispatch);
 }
