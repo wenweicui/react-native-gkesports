@@ -22,7 +22,8 @@
   },
 ```
 当前完成页面：大家参考代码就好。
-![](https://github.com/MIFind/react-native-knowme/blob/master/images/main.jpg =100x200)  
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/main.jpg" width=100 height=200/>
+
 ![](https://github.com/MIFind/react-native-knowme/blob/master/images/pictures.jpg  =100x200)  
 ![](https://github.com/MIFind/react-native-knowme/blob/master/images/me.jpg  =100x200) 
  ![](https://github.com/MIFind/react-native-knowme/blob/master/images/resume.jpg)  
