@@ -38,7 +38,7 @@ const Home = {
 
 const Navigator = StackNavigator(
     {
-        // ...Splash,
+        ...Splash,
         ...Main,
         ...Home,
         ...Common

@@ -31,7 +31,7 @@ export class SplashScreen extends WrapScreen {
                     this.showStatusBar('transparent');
                     let toHome = NavigationActions.reset({
                         index: 0,
-                        actions: [NavigationActions.navigate({routeName: 'Home'})]
+                        actions: [NavigationActions.navigate({routeName: 'Main'})]
                     });
                     this.props.navigation.dispatch(toHome)
                 }, timeFrame);
@@ -53,8 +53,8 @@ export class SplashScreen extends WrapScreen {
                 <View>
                     <Image style={[styles.image, {width}]} source={require('../../assets/images/splashBack.png')}/>
                     <View style={styles.text}>
-                        <Text style={styles.hero}>中联</Text>
-                        <Text style={styles.appName}>污水治不理</Text>
+                        <Text style={styles.hero}>KnowME</Text>
+                        <Text style={styles.appName}>KnowME</Text>
                     </View>
                 </View>
                 <ProgressBar
