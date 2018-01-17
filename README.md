@@ -22,9 +22,8 @@
   },
 ```
 当前完成页面：大家参考代码就好。
-<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/main.jpg" width=100 height=200/>
-
-![](https://github.com/MIFind/react-native-knowme/blob/master/images/pictures.jpg  =100x200)  
-![](https://github.com/MIFind/react-native-knowme/blob/master/images/me.jpg  =100x200) 
- ![](https://github.com/MIFind/react-native-knowme/blob/master/images/resume.jpg)  
-  ![](https://github.com/MIFind/react-native-knowme/blob/master/images/blog.jpg) 
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/main.jpg" width=250 height=500/>
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/pictures.jpg" width=250 height=500/>
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/me.jpg" width=250 height=500/>
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/resume.jpg" width=250 height=500/>
+<img src="https://github.com/MIFind/react-native-knowme/blob/master/images/blog.jpg" width=250 height=500/>
