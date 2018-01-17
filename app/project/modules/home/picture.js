@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     View,
-    Text, FlatList,
+     FlatList,
 } from 'react-native';
 import {WrapScreen} from "../wrap";
 import {connect} from "react-redux";
@@ -34,7 +34,6 @@ class PictureScreen extends WrapScreen {
     }
 
     _render() {
-        console.log(this.props.idList)
         const detail = this.props.idList;
         if (this.props.requestStatus === Status.SUCCESS) {
             if (!Loading.checkData(detail)) return;

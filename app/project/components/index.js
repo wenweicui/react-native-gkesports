@@ -4,3 +4,4 @@ export * from './tabBarItem';
 export * from './loading';
 export * from './error';
 export * from './default';
+export * from './dialog';
