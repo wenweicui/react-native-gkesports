@@ -10,7 +10,7 @@ import {EssayDetailScreen} from "../../project/modules/read";
  */
 const Splash = {
     Splash: {
-        screen: Modules.ReadScreen
+        screen: Modules.SplashScreen
     }
 };
 
