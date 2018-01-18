@@ -5,6 +5,7 @@ import _ from 'lodash'
 import React from "react";
 import {KHeader} from '../components'
 import store from '../redux/store/configStore'
+
 /**
  * BaseScreen
  */
@@ -40,7 +41,6 @@ export class WrapScreen extends Component {
     showStatusBar = (color?: string) => {
         Utils.StatusBarUtil.show();
         if (!_.isNull(color)) Utils.StatusBarUtil.setBackgroundColor(color).setTranslucent(true)
-
     };
 
     hideStatusBar = () => {
@@ -50,6 +50,12 @@ export class WrapScreen extends Component {
     getCurrentRouteName = () => {
         if (_.isNull(this.props.navigation)) return;
         return this.props.navigation.state.routeName
+    };
+
+    setTitle = (title) => {
+        this.header = {
+            title: title
+        }
     }
 }
 

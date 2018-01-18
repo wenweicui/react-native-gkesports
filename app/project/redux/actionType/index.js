@@ -8,10 +8,16 @@ const PICTURE = {
     REQUEST_LIST: Symbol(),
     REQUEST_DETAIL: Symbol()
 }
+
+const READING = {
+    READ_LIST: Symbol(),
+    ESSAY_DETAIL: Symbol()
+}
 //这个一定要放到最后
 const ActionType = {
     ...REQUEST,
-    ...PICTURE
+    ...PICTURE,
+    ...READING
 };
 
 export default ActionType;

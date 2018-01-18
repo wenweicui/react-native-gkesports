@@ -2,6 +2,7 @@ import {StackNavigator} from 'react-navigation';
 import * as Modules from '../../project/modules';
 import {WebScreen} from '../../project/components/web'
 import TabNav from "./TabNavigator";
+import {EssayDetailScreen} from "../../project/modules/read";
 
 /**
  * 欢迎页
@@ -9,7 +10,7 @@ import TabNav from "./TabNavigator";
  */
 const Splash = {
     Splash: {
-        screen: Modules.SplashScreen
+        screen: Modules.ReadScreen
     }
 };
 
@@ -26,6 +27,13 @@ const Main = {
  */
 const Common = {
     Web: {screen: WebScreen}
+};
+/**
+ * 阅读模块(阅读、问答)
+ * @type {{EssayDetail: {screen}}}
+ */
+const Read = {
+    EssayDetail: {screen: EssayDetailScreen}
 }
 const Home = {
     Picture: {screen: Modules.PictureScreen},
@@ -41,7 +49,8 @@ const Navigator = StackNavigator(
         ...Splash,
         ...Main,
         ...Home,
-        ...Common
+        ...Common,
+        ...Read
     }, {
         navigationOptions: {
             header: null,
