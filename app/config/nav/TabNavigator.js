@@ -13,13 +13,27 @@ const TabNav = TabNavigator(
         Work: {
             screen: Modules.HomeScreen,
             navigationOptions: {
-                tabBarLabel: '主页',
+                tabBarLabel: '今日',
                 tabBarIcon: ({focused, tintColor}) => (
                     <TabBarItem
                         showMessage={false}
                         focused={focused}
                         selectedImage={Asserts.Home.work_selected}
                         normalImage={Asserts.Home.work}
+                    />
+                )
+            },
+        },
+        Contact: {
+            screen: Modules.HomeScreen,
+            navigationOptions: {
+                tabBarLabel: '通讯录',
+                tabBarIcon: ({focused, tintColor}) => (
+                    <TabBarItem
+                        showMessage={false}
+                        focused={focused}
+                        selectedImage={Asserts.Home.contact_selected}
+                        normalImage={Asserts.Home.contact}
                     />
                 )
             },
@@ -34,6 +48,20 @@ const TabNav = TabNavigator(
                         focused={focused}
                         selectedImage={Asserts.Home.message_selected}
                         normalImage={Asserts.Home.message}
+                    />
+                )
+            },
+        },
+        Social: {
+            screen: Modules.HomeScreen,
+            navigationOptions: {
+                tabBarLabel: '圈子',
+                tabBarIcon: ({focused, tintColor}) => (
+                    <TabBarItem
+                        showMessage={false}
+                        focused={focused}
+                        selectedImage={Asserts.Home.social_selected}
+                        normalImage={Asserts.Home.social}
                     />
                 )
             },
@@ -61,9 +89,9 @@ const TabNav = TabNavigator(
         lazy: true, //懒加载
         tabBarOptions: {
             activeBackgroundColor: 'white',
-            activeTintColor: '#29a1f7',
+            activeTintColor: '#03C9A9',
             inactiveBackgroundColor: 'white',
-            inactiveTintColor: '#999999',
+            inactiveTintColor: '#9e9e9e',
             style: {
                 height: 55 * scale
             },
@@ -76,4 +104,3 @@ const TabNav = TabNavigator(
 );
 
 export default TabNav;
-

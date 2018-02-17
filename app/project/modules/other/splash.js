@@ -9,7 +9,6 @@ import {ProgressBar} from '../../components';
 import {NavigationActions} from 'react-navigation';
 import * as Utils from '../../../core/utils'
 import {WrapScreen} from "../wrap";
-
 let timeFrame = 500;
 
 export class SplashScreen extends WrapScreen {
@@ -48,17 +47,14 @@ export class SplashScreen extends WrapScreen {
 
     render() {
         let width = Dimensions.get('window').width;
+        let height = Dimensions.get('window').height;
         return (
             <View style={styles.container}>
                 <View>
-                    <Image style={[styles.image, {width}]} source={require('../../assets/images/splashBack.png')}/>
-                    <View style={styles.text}>
-                        <Text style={styles.hero}>KnowME</Text>
-                        <Text style={styles.appName}>KnowME</Text>
-                    </View>
+                    <Image style={[styles.image, {width,height}]} source={require('../../assets/images/splash.png')}/>
                 </View>
                 <ProgressBar
-                    color={'#ffffff'}
+                    color={'#000'}
                     style={styles.progress}
                     progress={this.state.progress} width={320}/>
             </View>
@@ -68,12 +64,11 @@ export class SplashScreen extends WrapScreen {
 
 const styles = Utils.PLStyle({
     container: {
-        justifyContent: 'space-between',
-        flex: 1
+        flex: 1,
+        backgroundColor: '#fff'
     },
     image: {
-        resizeMode: 'cover',
-        height: 430,
+        resizeMode: 'contain',
     },
     text: {
         alignItems: 'center'
@@ -85,8 +80,9 @@ const styles = Utils.PLStyle({
         fontSize: 62,
     },
     progress: {
+        position: 'absolute',
+        bottom:35,
         alignSelf: 'center',
-        marginBottom: 35,
-        backgroundColor: '#e5e5e5'
+        backgroundColor: '#fff'
     }
 });

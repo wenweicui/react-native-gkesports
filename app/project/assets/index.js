@@ -2,12 +2,16 @@
  * 首页图标
  */
 const Home = {
-    work: require('./images/icon_work.png'),
-    work_selected: require('./images/icon_work_selected.png'),
-    message: require('./images/icon_message.png'),
-    message_selected: require('./images/icon_message_selected.png'),
-    me: require('./images/icon_person.png'),
-    me_selected: require('./images/icon_person_selected.png'),
+    work: require('./images/home.png'),
+    work_selected: require('./images/home_selected.png'),
+    contact: require('./images/contact.png'),
+    contact_selected: require('./images/contact_selected.png'),
+    message: require('./images/mailbox.png'),
+    message_selected: require('./images/mailbox_selected.png'),
+    social: require('./images/social.png'),
+    social_selected: require('./images/social_selected.png'),
+    me: require('./images/user.png'),
+    me_selected: require('./images/user_selected.png'),
 };
 const H5 = {
     map: require('./html/map/index.html'),
