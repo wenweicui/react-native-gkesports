@@ -62,6 +62,6 @@ export class WrapScreen extends Component {
 const styles = Utils.PLStyle({
     container: {
         flex: 1,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
 });

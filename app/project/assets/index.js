@@ -18,7 +18,7 @@ const H5 = {
     resume: require('./html/resume/index.html')
 };
 const Me = {
-    avatar: require('./images/avatar.jpeg'),
+    avatar: require('./images/avatar.jpg'),
     Images: [
         require('./images/img1.png'),
         require('./images/img2.png'),
