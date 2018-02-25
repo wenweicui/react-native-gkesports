@@ -28,9 +28,7 @@ const styles = Utils.PLStyle({
         width: 26,
         height: 24,
         ios: {
-            marginTop: -16
+            marginTop: 7
         }
     }
 });
-
-

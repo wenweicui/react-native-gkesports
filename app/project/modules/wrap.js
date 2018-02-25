@@ -11,9 +11,7 @@ import store from '../redux/store/configStore'
  */
 export class WrapScreen extends Component {
     componentDidMount() {
-        if (!_.isEqual(this.getCurrentRouteName(), "Splash"))
-            this.showStatusBar('transparent');
-
+        if (!_.isEqual(this.getCurrentRouteName(), "Splash"));
     }
 
     constructor(props) {
@@ -36,15 +34,6 @@ export class WrapScreen extends Component {
                 {this._render()}
             </View>
         )
-    }
-
-    showStatusBar = (color?: string) => {
-        Utils.StatusBarUtil.show();
-        if (!_.isNull(color)) Utils.StatusBarUtil.setBackgroundColor(color).setTranslucent(true)
-    };
-
-    hideStatusBar = () => {
-        Utils.StatusBarUtil.hidden();
     }
 
     getCurrentRouteName = () => {

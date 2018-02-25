@@ -1,0 +1,48 @@
+import PropTypes from 'prop-types';
+import React from 'react';
+import {
+  Linking,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  ViewPropTypes,
+} from 'react-native';
+
+export default class CustomView extends React.Component {
+  render() {
+    if (this.props.currentMessage.location) {
+      return (
+        <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={() => {
+          const url = Platform.select({
+            ios: `http://maps.apple.com/?ll=${this.props.currentMessage.location.latitude},${this.props.currentMessage.location.longitude}`,
+            android: `http://maps.google.com/?q=${this.props.currentMessage.location.latitude},${this.props.currentMessage.location.longitude}`
+          });
+          Linking.canOpenURL(url).then(supported => {
+            if (supported) {
+              return Linking.openURL(url);
+            }
+          }).catch(err => {
+            console.error('An error occurred', err);
+          });
+        }}>
+        </TouchableOpacity>
+      );
+    }
+    return null;
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+  },
+});
+
+CustomView.defaultProps = {
+  currentMessage: {},
+  containerStyle: {},
+};
+
+CustomView.propTypes = {
+  currentMessage: PropTypes.object,
+  containerStyle: ViewPropTypes.style,
+};

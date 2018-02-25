@@ -12,24 +12,25 @@ import {WrapScreen} from "../wrap";
 import * as Utils from "../../../core/utils";
 import * as Assets from '../../assets'
 import {Avatar, Button, Divider, List, ListItem} from "react-native-elements";
+import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 const CardHeight = (Dimensions.get('window').width - 30) * 0.63;
 const list = [
   {
-    title: '通用',
-    icon: 'ios-construct-outline'
-  },
-  {
-    title: '通知',
-    icon: 'ios-notifications-outline'
+    title: '邀请好友',
+    icon: 'ios-person-add-outline'
   },
   {
     title: 'Language',
     icon: 'ios-globe-outline'
   },
   {
-    title: '邀请好友',
-    icon: 'ios-person-add-outline'
+    title: '账户设置',
+    icon: 'ios-construct-outline'
+  },
+  {
+    title: '通知',
+    icon: 'ios-notifications-outline'
   },
   {
     title: '向作者反馈',
@@ -138,7 +139,11 @@ const styles = Utils.PLStyle({
         flex: 1,
         flexDirection: 'column',
         paddingTop: 10,
-        marginTop:20
+        ...ifIphoneX({
+             marginTop: 50
+         }, {
+             marginTop: 20
+         })
     },
     head: {
         justifyContent:'space-between',

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>41116156358-g8r4ptt1fvclqruu85c3s8cq7rn603un.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.41116156358-g8r4ptt1fvclqruu85c3s8cq7rn603un</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB-swsGpbW5frOqN_i3_pryYHiWfvRTZMc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>41116156358</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wenweicui.gkesports</string>
+	<key>PROJECT_ID</key>
+	<string>gk-esports</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gk-esports.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:41116156358:ios:c537dda1bcaacb80</string>
+	<key>DATABASE_URL</key>
+	<string>https://gk-esports.firebaseio.com</string>
+</dict>
+</plist>

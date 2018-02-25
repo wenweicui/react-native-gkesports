@@ -22,12 +22,10 @@ export class SplashScreen extends WrapScreen {
     }
 
     componentDidMount() {
-        this.hideStatusBar();
         this.timer = setInterval(() => {
             if (this.state.progress === 1) {
                 clearInterval(this.timer);
                 setTimeout(() => {
-                    this.showStatusBar('transparent');
                     let toHome = NavigationActions.reset({
                         index: 0,
                         actions: [NavigationActions.navigate({routeName: 'Main'})]

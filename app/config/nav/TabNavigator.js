@@ -13,7 +13,7 @@ const TabNav = TabNavigator(
         Work: {
             screen: Modules.HomeScreen,
             navigationOptions: {
-                tabBarLabel: '今日',
+                tabBarLabel: '主页',
                 tabBarIcon: ({focused, tintColor}) => (
                     <TabBarItem
                         showMessage={false}
@@ -25,7 +25,7 @@ const TabNav = TabNavigator(
             },
         },
         Contact: {
-            screen: Modules.HomeScreen,
+            screen: Modules.ContactScreen,
             navigationOptions: {
                 tabBarLabel: '通讯录',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -53,7 +53,7 @@ const TabNav = TabNavigator(
             },
         },
         Social: {
-            screen: Modules.HomeScreen,
+            screen: Modules.SocialScreen,
             navigationOptions: {
                 tabBarLabel: '圈子',
                 tabBarIcon: ({focused, tintColor}) => (
