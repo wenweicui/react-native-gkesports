@@ -14,7 +14,7 @@ import * as Utils from "../../../core/utils";
 import * as Assets from '../../assets'
 import {Avatar, Button, Divider, List, ListItem} from "react-native-elements";
 import { ifIphoneX } from 'react-native-iphone-x-helper'
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 let typeList = [
   { nickname: '曾泰', picture: '', letter: 'Z' },
@@ -194,7 +194,7 @@ class Reward extends React.Component {
         <View style={{paddingTop:10, borderBottomWidth: 1,borderBottomColor:'rgba(192,192,192,0.3)',...ifIphoneX({marginTop: 50}, {marginTop: 20})}}>
            <View style={{paddingHorizontal:15,height:50,justifyContent:'space-between',flexDirection:'row'}}>
            <TouchableOpacity style={{flex:1,alignItems:"flex-start",justifyContent:'center'}} onPress={() => navigation.goBack()}>
-             <Icon name="ios-arrow-back" size={34} color="#5e5959" />
+             <Icon name="arrow-left" size={22} color="#5e5959" />
            </TouchableOpacity>
              <View style={{flex:2.5,alignSelf:'center'}}>
                <Text style={{color:'#5E5959', fontSize:20,fontWeight:'bold',alignSelf:'center'}}>积分兑换</Text>

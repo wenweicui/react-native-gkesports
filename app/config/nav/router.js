@@ -22,7 +22,8 @@ const Main = {
     Chat: {screen: Modules.ChatScreen},
     NearBy: {screen: Modules.NearBy},
     Scan: {screen: Modules.Scan},
-    Reward: {screen: Modules.Reward}
+    Reward: {screen: Modules.Reward},
+    Seat: {screen: Modules.Seat},
 };
 
 const Common = {

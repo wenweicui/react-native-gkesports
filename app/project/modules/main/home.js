@@ -105,11 +105,11 @@ export class HomeScreen extends WrapScreen {
                         <Text style={{color:'#b7b7b7', fontSize:16,fontWeight:'500',paddingLeft:5}}>普通会员</Text>
                       </View>
                     </View>
-                    <Text style={{color:'#ccc', fontSize:16,fontWeight:'500',paddingLeft:5}}>升级还需10小时游戏时间</Text>
+                    <Text style={{color:'#ccc', fontSize:16,fontWeight:'500',paddingLeft:5}}>升级还需60小时游戏时间</Text>
                  </View>
                  <View style={{justifyContent:"center"}}>
                     <AnimatedCircularProgress
-                       size={100}
+                       size={90}
                        width={5}
                        fill={this.state.fill}
                        tintColor="#3498DB"
@@ -128,7 +128,7 @@ export class HomeScreen extends WrapScreen {
             <View style={{flex:1,backgroundColor:'white',paddingTop:10}}>
                <View  style={styles.container}>
                   <View style={styles.imgContainer}>
-                    <Image style={styles.img} source={{uri: 'http://img.mp.itc.cn/upload/20170423/6455997b925040bd9da7f0415896c135_th.jpg'}} />
+                    <Image style={styles.img} source={require('../../images/banner.png')} />
                   </View>
                  <View style={{paddingTop:20}}>
                     <View style={{flexDirection:'row', justifyContent:"space-between",paddingHorizontal:30}}>
@@ -140,7 +140,7 @@ export class HomeScreen extends WrapScreen {
                         <Image style={styles.icon} source={require('../icons/vip.png')} />
                         <Text style={styles.iconText}>会员卡</Text>
                       </TouchableOpacity>
-                      <TouchableOpacity style={{alignItems:'center'}}>
+                      <TouchableOpacity style={{alignItems:'center'}} onPress={() => {this.props.navigation.navigate('Seat')}}>
                         <Image style={styles.icon} source={require('../icons/seat.png')} />
                         <Text style={styles.iconText}>订座</Text>
                       </TouchableOpacity>
@@ -199,7 +199,7 @@ const styles = Utils.PLStyle({
       paddingTop: StatusBar.currentHeight
     },
     header: {
-      paddingTop:10,
+      paddingTop:20,
       ...ifIphoneX({
              marginTop: 50
          }, {
@@ -213,7 +213,7 @@ const styles = Utils.PLStyle({
     },
     img: {
       width: SCREEN_WIDTH,
-      height: 220
+      height: 200
     },
     icon: {
       width:30,
@@ -255,7 +255,7 @@ const styles = Utils.PLStyle({
     imgContainer:{
       backgroundColor: 'transparent',
       overflow: 'hidden',
-      height: 220,
+      height: 200,
       width: SCREEN_WIDTH,
     },
     linearGradient: {

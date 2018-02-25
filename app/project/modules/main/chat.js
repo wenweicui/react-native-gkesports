@@ -9,6 +9,7 @@ import {
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
 import CustomActions from './CustomActions';
 import CustomView from './CustomView';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 class Chat extends React.Component {
   constructor(props) {
