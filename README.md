@@ -3,6 +3,8 @@
 
 A React Native app showcasing some examples using the lightweight [react-native-game-engine](https://github.com/bberak/react-native-game-engine) library.
 
+Designed for the appoinment booking and client reward digital membership card.
+
 <p align="center">
     <img src="https://cdn.dribbble.com/users/1168645/screenshots/4254423/gkmock.png" height="400" />
 </p>
